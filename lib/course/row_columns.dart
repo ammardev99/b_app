@@ -1,7 +1,5 @@
 // practice row and column
-import 'package:b_app/course/go_router.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class RowColumns extends StatefulWidget {
   const RowColumns({super.key});

@@ -1,6 +1,7 @@
 
 // call: context.go(AppRoutes.home);
 // app_routes.dart
+import 'package:b_app/course/buttons_functions.dart';
 import 'package:b_app/course/classlist.dart';
 import 'package:b_app/course/container.dart';
 import 'package:b_app/course/icons_images.dart';
@@ -15,6 +16,7 @@ class AppRoutes {
   static const String container = '/ContainerClass';
   static const String stackClass = '/StackClass';
   static const String iconsImages = '/IconsImages';
+  static const String buttonsFunctions = '/ButtonsFunctions';
 }
 // app_router.dart
 
@@ -39,6 +41,10 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: AppRoutes.iconsImages,
       builder: (context, state) => IconsImages(),
+    ),
+    GoRoute(
+      path: AppRoutes.buttonsFunctions,
+      builder: (context, state) => ButtonsFunctions(),
     ),
     // GoRoute(
     //   path: AppRoutes.profile,

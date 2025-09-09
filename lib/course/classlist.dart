@@ -30,6 +30,11 @@ class _ClassListState extends State<ClassList> {
             context.go(AppRoutes.iconsImages);
           }, child: Text("IconsImages")),
           
+          SizedBox(height: 20,),
+          ElevatedButton(onPressed: () {
+            context.go(AppRoutes.buttonsFunctions);
+          }, child: Text("Buttons")),
+          
           ],
       ),
     );
