@@ -1,4 +1,4 @@
-import 'package:b_app/intraction/class1.dart';
+import 'package:b_app/course/go_router.dart';
 import 'package:flutter/material.dart';
 
 
@@ -8,18 +8,15 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      // home: EquatablePkg(),
-      // home: FormInput(),
-      home: Class1(),
+      routerConfig: appRouter,
     );
   }
 }
