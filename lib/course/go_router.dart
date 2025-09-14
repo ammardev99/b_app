@@ -9,6 +9,8 @@ import 'package:b_app/course/row_columns.dart';
 import 'package:b_app/course/stack_class.dart';
 import 'package:go_router/go_router.dart';
 
+import '../riverpod/riverpod_class1.dart';
+
 class AppRoutes {
   static const String classList = '/';
   static const String rowColumns = '/RowColumns';
@@ -17,6 +19,7 @@ class AppRoutes {
   static const String stackClass = '/StackClass';
   static const String iconsImages = '/IconsImages';
   static const String buttonsFunctions = '/ButtonsFunctions';
+  static const String testRiverPod = '/TestRiverPod';
 }
 // app_router.dart
 
@@ -46,12 +49,9 @@ final GoRouter appRouter = GoRouter(
       path: AppRoutes.buttonsFunctions,
       builder: (context, state) => ButtonsFunctions(),
     ),
-    // GoRoute(
-    //   path: AppRoutes.profile,
-    //   builder: (context, state) {
-    //     final username = state.params['username']!;
-    //     return ProfileScreen(username: username);
-    //   },
-    // ),
+    GoRoute(
+      path: AppRoutes.testRiverPod,
+      builder: (context, state) => TestRiverPod(),
+    ),
   ],
 );

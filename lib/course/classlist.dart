@@ -17,25 +17,43 @@ class _ClassListState extends State<ClassList> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          ElevatedButton(onPressed: () {
-            context.go(AppRoutes.container);
-          }, child: Text("container")),
-          SizedBox(height: 20,),
-          ElevatedButton(onPressed: () {
-            context.go(AppRoutes.stackClass);
-          }, child: Text("Stack")),
-          
-          SizedBox(height: 20,),
-          ElevatedButton(onPressed: () {
-            context.go(AppRoutes.iconsImages);
-          }, child: Text("IconsImages")),
-          
-          SizedBox(height: 20,),
-          ElevatedButton(onPressed: () {
-            context.go(AppRoutes.buttonsFunctions);
-          }, child: Text("Buttons")),
-          
-          ],
+          ElevatedButton(
+            onPressed: () {
+              context.go(AppRoutes.container);
+            },
+            child: Text("container"),
+          ),
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              context.go(AppRoutes.stackClass);
+            },
+            child: Text("Stack"),
+          ),
+
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              context.go(AppRoutes.iconsImages);
+            },
+            child: Text("IconsImages"),
+          ),
+
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              context.go(AppRoutes.buttonsFunctions);
+            },
+            child: Text("Buttons"),
+          ),
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              context.go(AppRoutes.testRiverPod);
+            },
+            child: Text("TestRiverPod"),
+          ),
+        ],
       ),
     );
   }
