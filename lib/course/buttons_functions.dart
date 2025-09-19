@@ -89,12 +89,23 @@ class _ButtonsFunctionsState extends State<ButtonsFunctions> {
             //     // Action for IconButton
             //   },
             // ),
+
+            printLineCard("Flutter",),
           ],
         ),
       ),
     );
   }
 }
+
+
+Widget printLineCard(String str, [String? chr]){
+  return Text("$chr*****$str*****$chr");
+}
+
+
+
+
 
 void printMyline() {
   print("-----------------------");
@@ -115,3 +126,6 @@ void customTerminalText(String txt) {
   print(txt);
   printMyline();
 }
+
+
+

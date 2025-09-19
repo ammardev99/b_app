@@ -53,6 +53,27 @@ class _ClassListState extends State<ClassList> {
             },
             child: Text("TestRiverPod"),
           ),
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              context.go(AppRoutes.formClass);
+            },
+            child: Text("FormClass "),
+          ),
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              context.go(AppRoutes.formClass);
+            },
+            child: Text("FormClass "),
+          ),
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              context.go(AppRoutes.pos);
+            },
+            child: Text("POS"),
+          ),
         ],
       ),
     );

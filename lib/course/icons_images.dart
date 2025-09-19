@@ -1,7 +1,9 @@
 import 'package:b_app/course/go_router.dart';
-import 'package:b_app/images/images.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
+import '../config/utils/colors_list.dart';
+import '../config/utils/images_list.dart';
 
 class IconsImages extends StatefulWidget {
   const IconsImages({super.key});
@@ -25,26 +27,33 @@ class _IconsImagesState extends State<IconsImages> {
           //   width: 300,
           // ),
 
-      // Container(
-      //   width: 300,
-      //   height: 200,
-      //   color: Colors.red,
-      //   child: Image.asset('assets/female/female1.png', fit: BoxFit.cover,
-      //   ),),
       Container(
         width: 300,
         height: 200,
-        decoration: BoxDecoration(
-        color: MyColors.secondary,
-        image: DecorationImage(image: AssetImage(MyImages.man1),
-        // grey color filter 
-        // colorFilter: ColorFilter.mode(Colors.grey, BlendMode.saturation),
-        colorFilter: ColorFilter.mode(Colors.grey, BlendMode.saturation)
-        )
+        color: Colors.red,
+        // child: Image.asset('assets/female/female1.png', fit: BoxFit.cover,
+        child: Image.asset(AppImages.manImg2, fit: BoxFit.cover,
+        ),),
+      // Container(
+      //   width: 300,
+      //   height: 200,
+      //   decoration: BoxDecoration(
+      //   color: MyColors.secondary,
+      //   image: DecorationImage(image: AssetImage(MyImages.female1),
+      //   // grey color filter 
+      //   // colorFilter: ColorFilter.mode(Colors.grey, BlendMode.saturation),
+      //   colorFilter: ColorFilter.mode(Colors.grey, BlendMode.saturation)
+      //   )
+      Container(
+        height: 100,
+        width: 200,
+        // color: Colors.amber,
+        color: AppColors.secondaryColor,
+      ),
 
-        ),
-        child: Text("data")
-        ),
+      //   ),
+      //   child: Text("data")
+      //   ),
       // E:\Drive 494\Flutter\Apps\b_app\assets\man1.png
       // assets\man1.png
 
