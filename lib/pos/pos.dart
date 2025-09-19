@@ -22,6 +22,7 @@ class POS extends StatelessWidget {
             label: "Primary Button",
             bgColor: Colors.blue,
             onPressed: () {
+              // ignore: avoid_print
               print('test');
             },
           ),

@@ -1,4 +1,6 @@
 
+// ignore_for_file: avoid_print
+
 import 'package:b_app/widgets/formatting.dart';
 import 'package:flutter/material.dart';
 

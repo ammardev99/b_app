@@ -1,22 +1,48 @@
-import 'package:b_app/riverpod/providers/counter_provider.dart';
 import 'package:flutter/material.dart';
+import 'state_providers/counter_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class CounterScreen extends ConsumerWidget {
-  const CounterScreen({super.key});
+class MyCounterRiverpod extends ConsumerWidget {
+  const MyCounterRiverpod({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final count = ref.watch(counterProvider);
-
+    final counter = ref.watch(myCounter);
     return Scaffold(
-      appBar: AppBar(title: const Text("Counter App")),
-      body: Center(
-        child: Text("Count: $count", style: const TextStyle(fontSize: 24)),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => ref.read(counterProvider.notifier).state++,
-        child: const Icon(Icons.add),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Center(
+            child: Text(
+              counter.toString(),
+              style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  ref.read(myCounter.notifier).state++;
+                },
+                child: const Text('Increment'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  ref.read(myCounter.notifier).state = 0;
+                },
+                child: const Text('Reset'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  ref.read(myCounter.notifier).state--;
+                },
+                child: const Text('Decrement'),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

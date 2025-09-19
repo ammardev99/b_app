@@ -1,4 +1,3 @@
-
 // call: context.go(AppRoutes.home);
 // app_routes.dart
 import 'package:b_app/course/buttons_functions.dart';
@@ -8,10 +7,10 @@ import 'package:b_app/course/form_class.dart';
 import 'package:b_app/course/icons_images.dart';
 import 'package:b_app/course/row_columns.dart';
 import 'package:b_app/course/stack_class.dart';
+import 'package:b_app/riverpod/counter_screen.dart';
 import 'package:go_router/go_router.dart';
 
 import '../pos/pos.dart';
-import '../riverpod/riverpod_class1.dart';
 
 class AppRoutes {
   static const String classList = '/';
@@ -22,8 +21,8 @@ class AppRoutes {
   static const String iconsImages = '/IconsImages';
   static const String buttonsFunctions = '/ButtonsFunctions';
   static const String testRiverPod = '/TestRiverPod';
-  static const String formClass  = '/FormClass';
-  static const String pos  = '/POS';
+  static const String formClass = '/FormClass';
+  static const String pos = '/POS';
 }
 // app_router.dart
 
@@ -55,15 +54,12 @@ final GoRouter appRouter = GoRouter(
     ),
     GoRoute(
       path: AppRoutes.testRiverPod,
-      builder: (context, state) => TestRiverPod(),
+      builder: (context, state) => MyCounterRiverpod(),
     ),
     GoRoute(
       path: AppRoutes.formClass,
-      builder: (context, state) => FormClass (),
+      builder: (context, state) => FormClass(),
     ),
-    GoRoute(
-      path: AppRoutes.pos,
-      builder: (context, state) => POS(),
-    ),
+    GoRoute(path: AppRoutes.pos, builder: (context, state) => POS()),
   ],
 );
