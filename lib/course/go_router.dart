@@ -5,6 +5,8 @@ import 'package:b_app/course/classlist.dart';
 import 'package:b_app/course/container.dart';
 import 'package:b_app/course/form_class.dart';
 import 'package:b_app/course/icons_images.dart';
+import 'package:b_app/course/listview.dart';
+import 'package:b_app/course/richtext_class.dart';
 import 'package:b_app/course/row_columns.dart';
 import 'package:b_app/course/stack_class.dart';
 import 'package:b_app/riverpod/counter_screen.dart';
@@ -23,6 +25,8 @@ class AppRoutes {
   static const String testRiverPod = '/TestRiverPod';
   static const String formClass = '/FormClass';
   static const String pos = '/POS';
+  static const String listV = '/ListV';
+  static const String richTextClass = '/RichTextClass';
 }
 // app_router.dart
 
@@ -61,5 +65,7 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) => FormClass(),
     ),
     GoRoute(path: AppRoutes.pos, builder: (context, state) => POS()),
+    GoRoute(path: AppRoutes.listV, builder: (context, state) => ListViewClass()),
+    GoRoute(path: AppRoutes.richTextClass, builder: (context, state) => RichTextClass()),
   ],
 );

@@ -29,7 +29,8 @@ class _ButtonsFunctionsState extends State<ButtonsFunctions> {
                 backgroundColor: WidgetStateProperty.all(Colors.green),
               ),
               onPressed: () {
-                customTerminalText("Clicked Elevated Button");
+
+                // customTerminalText("Clicked Elevated Button");
               },
               child: Text(
                 "Click 1",
@@ -43,53 +44,47 @@ class _ButtonsFunctionsState extends State<ButtonsFunctions> {
             SizedBox(height: 10),
             TextButton(
               onPressed: () {
-                customTerminalText("Text Button Clicked");
+
+                // customTerminalText("Text Button Clicked");
               },
               child: Text("Text 2"),
             ),
             SizedBox(height: 10),
             OutlinedButton(
               onPressed: () {
-                customTerminalText("Outlined Button Clicked");
+                // customTerminalText("Outlined Button Clicked");
               },
               child: Text("Outlined 3"),
             ),
             SizedBox(height: 10),
             IconButton(
               onPressed: () {
-                customTerminalText("Icon Button Clicked");
+                // customTerminalText("Icon Button Clicked");
               },
               icon: Icon(Icons.thumb_up),
             ),
 
+            TextButton(onPressed: (){
+              // printStrLine();
+              printMyLine('#');
+            }, child: Text("Print Line")),
+
+            SizedBox(height: 20,),
+
+            IconButton(onPressed: (){
+              // sum(10, 15);
+              print(50);
+              print(sumValue(50, 10));
+
+            }, icon: Icon(Icons.calculate_rounded)),
+            SizedBox(height: 20,),
             Divider(),
+            SizedBox(height: 20,),
 
-            //
-            // ElevatedButton(
-            //   onPressed: () {
-            //     // Action for ElevatedButton
-            //   },
-            //   child: const Text('Elevated Button'),
             // ),
-            // TextButton(
-            //   onPressed: () {
-            //     // Action for TextButton
-            //   },
-            //   child: const Text('Text Button'),
-            // ),
-            // OutlinedButton(
-            //   onPressed: () {
-            //     // Action for OutlinedButton
-            //   },
-            //   child: const Text('Outlined Button'),
-            // ),
-            // IconButton(
-            //   icon: const Icon(Icons.thumb_up),
-            //   onPressed: () {
-            //     // Action for IconButton
-            //   },
-            // ),
-
+// myContainer("App Name",50, 300, Colors.green),
+myContainer(Icons.call ,50, 300, Colors.green),
+myContainer(Icons.video_call ,20, 100, Colors.red),
             printLineCard("Flutter",),
           ],
         ),
@@ -106,26 +101,35 @@ Widget printLineCard(String str, [String? chr]){
 
 
 
+// print line
+// print value
+// Sum
 
-void printMyline() {
-  print("-----------------------");
+
+void printStrLine(){
+  print("*************************");
 }
 
-void pintvalue(int arguA) {
-  print("the Value of $arguA");
-}
-
-void sum(int x, int y) {
-  // parameters
-  print("X= $x, Y= $y");
-  print("Sum is: ${x + y}");
-}
-
-void customTerminalText(String txt) {
-  printMyline();
-  print(txt);
-  printMyline();
+void printMyLine(String txt){
+  print(txt+txt+txt+txt+txt+txt+txt+txt+txt+txt+txt+txt+txt+txt+txt+txt+txt+txt);
 }
 
 
+void sum(int x, int y){
+  print("Sum: ${x+y}" );
+}
 
+double sumValue(double x, double y){
+  return x+y;
+
+}
+
+Widget myContainer(IconData getIcon, double h, double w, Color getColor){
+  return Container(
+    height: h,
+    width: w,
+    color: getColor,
+    // child: Text(label),
+    child: Icon(getIcon),
+  );
+}
