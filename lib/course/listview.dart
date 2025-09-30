@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 
 class ProductDataType {
@@ -16,7 +18,7 @@ List<ProductDataType> rack = [
 
 // ignore: must_be_immutable
 class ListViewClass extends StatefulWidget {
-  ListViewClass({super.key});
+  const ListViewClass({super.key});
 
   @override
   State<ListViewClass> createState() => _ListViewClassState();

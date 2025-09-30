@@ -1,9 +1,12 @@
 // call: context.go(AppRoutes.home);
 // app_routes.dart
 import 'package:b_app/course/buttons_functions.dart';
+import 'package:b_app/course/class11.dart';
+import 'package:b_app/course/class21.dart';
 import 'package:b_app/course/classlist.dart';
 import 'package:b_app/course/container.dart';
 import 'package:b_app/course/form_class.dart';
+import 'package:b_app/course/grid_builder.dart';
 import 'package:b_app/course/icons_images.dart';
 import 'package:b_app/course/listview.dart';
 import 'package:b_app/course/richtext_class.dart';
@@ -27,6 +30,9 @@ class AppRoutes {
   static const String pos = '/POS';
   static const String listV = '/ListV';
   static const String richTextClass = '/RichTextClass';
+  static const String class11 = '/Class11';
+  static const String myListsView = '/MyListsView';
+  static const String gridBuilder = '/GridBuilder';
 }
 // app_router.dart
 
@@ -65,7 +71,13 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) => FormClass(),
     ),
     GoRoute(path: AppRoutes.pos, builder: (context, state) => POS()),
-    GoRoute(path: AppRoutes.listV, builder: (context, state) => ListViewClass()),
-    GoRoute(path: AppRoutes.richTextClass, builder: (context, state) => RichTextClass()),
+    GoRoute(
+      path: AppRoutes.listV,
+      builder: (context, state) => ListViewClass(),
+    ),
+    GoRoute( path: AppRoutes.richTextClass, builder: (context, state) => RichTextClass(), ),
+    GoRoute(path: AppRoutes.class11, builder: (context, state) => Class11()),
+    GoRoute(path: AppRoutes.myListsView, builder: (context, state) => MyListsView()),
+    GoRoute(path: AppRoutes.gridBuilder, builder: (context, state) => GridBuilder()),
   ],
 );

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
+// ignore: must_be_immutable
 class RichTextClass extends StatelessWidget {
    RichTextClass({super.key});
 int num = 521810510;

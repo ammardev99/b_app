@@ -2,8 +2,6 @@ import 'package:b_app/course/go_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../config/utils/images_list.dart';
-
 class ClassList extends StatefulWidget {
   const ClassList({super.key});
 
@@ -71,6 +69,24 @@ class _ClassListState extends State<ClassList> {
                 context.go(AppRoutes.stackClass);
               },
               child: Text("Stack"),
+            ),
+            SizedBox(height: 20),
+
+            ElevatedButton(
+              onPressed: () {
+                context.go(AppRoutes.class11);
+              },
+
+              child: Text("Class11"),
+            ),
+            SizedBox(height: 20),
+
+            ElevatedButton(
+              onPressed: () {
+                context.go(AppRoutes.gridBuilder);
+              },
+
+              child: Text("GridBuilder"),
             ),
 
             SizedBox(height: 20),
@@ -164,6 +180,13 @@ class _ClassListState extends State<ClassList> {
                 context.go(AppRoutes.listV);
               },
               child: Text("ListV"),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                context.go(AppRoutes.myListsView);
+              },
+              child: Text("MyListsView"),
             ),
           ],
         ),
