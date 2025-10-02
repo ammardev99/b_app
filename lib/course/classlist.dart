@@ -112,6 +112,15 @@ class _ClassListState extends State<ClassList> {
               child: Text("Buttons"),
             ),
             SizedBox(height: 20),
+
+            ElevatedButton(
+              onPressed: () {
+                context.go(AppRoutes.bottonBarClass);
+              },
+              child: Text("BottonBarClass"),
+
+            ),
+            SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 context.go(AppRoutes.testRiverPod);

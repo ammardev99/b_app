@@ -1,5 +1,4 @@
 import 'package:b_app/config/model/person_model.dart';
-import 'package:b_app/widgets/formatting.dart';
 import 'package:flutter/material.dart';
 
 class MyListsView extends StatelessWidget {

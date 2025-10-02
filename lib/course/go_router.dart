@@ -1,5 +1,6 @@
 // call: context.go(AppRoutes.home);
 // app_routes.dart
+import 'package:b_app/course/botonbar.dart';
 import 'package:b_app/course/buttons_functions.dart';
 import 'package:b_app/course/class11.dart';
 import 'package:b_app/course/class21.dart';
@@ -33,6 +34,7 @@ class AppRoutes {
   static const String class11 = '/Class11';
   static const String myListsView = '/MyListsView';
   static const String gridBuilder = '/GridBuilder';
+  static const String bottonBarClass = '/BottonBarClass';
 }
 // app_router.dart
 
@@ -79,5 +81,6 @@ final GoRouter appRouter = GoRouter(
     GoRoute(path: AppRoutes.class11, builder: (context, state) => Class11()),
     GoRoute(path: AppRoutes.myListsView, builder: (context, state) => MyListsView()),
     GoRoute(path: AppRoutes.gridBuilder, builder: (context, state) => GridBuilder()),
+    GoRoute(path: AppRoutes.bottonBarClass, builder: (context, state) => BottonBarClass()),
   ],
 );
