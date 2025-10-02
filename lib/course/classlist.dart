@@ -88,6 +88,23 @@ class _ClassListState extends State<ClassList> {
 
               child: Text("GridBuilder"),
             ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                context.go(AppRoutes.class22);
+              },
+              child: Text("Class 22"),
+            ),
+
+            SizedBox(height: 20),
+
+            ElevatedButton(
+              onPressed: () {
+                context.go(AppRoutes.pickerClass);
+              },
+
+              child: Text("PickerClass"),
+            ),
 
             SizedBox(height: 20),
             ElevatedButton(
@@ -118,7 +135,6 @@ class _ClassListState extends State<ClassList> {
                 context.go(AppRoutes.bottonBarClass);
               },
               child: Text("BottonBarClass"),
-
             ),
             SizedBox(height: 20),
             ElevatedButton(

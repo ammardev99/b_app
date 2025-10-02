@@ -4,12 +4,14 @@ import 'package:b_app/course/botonbar.dart';
 import 'package:b_app/course/buttons_functions.dart';
 import 'package:b_app/course/class11.dart';
 import 'package:b_app/course/class21.dart';
+import 'package:b_app/course/class22.dart';
 import 'package:b_app/course/classlist.dart';
 import 'package:b_app/course/container.dart';
 import 'package:b_app/course/form_class.dart';
 import 'package:b_app/course/grid_builder.dart';
 import 'package:b_app/course/icons_images.dart';
 import 'package:b_app/course/listview.dart';
+import 'package:b_app/course/pickerClass.dart';
 import 'package:b_app/course/richtext_class.dart';
 import 'package:b_app/course/row_columns.dart';
 import 'package:b_app/course/stack_class.dart';
@@ -35,6 +37,8 @@ class AppRoutes {
   static const String myListsView = '/MyListsView';
   static const String gridBuilder = '/GridBuilder';
   static const String bottonBarClass = '/BottonBarClass';
+  static const String class22 = '/Class22';
+  static const String pickerClass = '/PickerClass';
 }
 // app_router.dart
 
@@ -82,5 +86,7 @@ final GoRouter appRouter = GoRouter(
     GoRoute(path: AppRoutes.myListsView, builder: (context, state) => MyListsView()),
     GoRoute(path: AppRoutes.gridBuilder, builder: (context, state) => GridBuilder()),
     GoRoute(path: AppRoutes.bottonBarClass, builder: (context, state) => BottonBarClass()),
+    GoRoute(path: AppRoutes.class22, builder: (context, state) => Class22()),
+    GoRoute(path: AppRoutes.pickerClass, builder: (context, state) => PickerClass()),
   ],
 );
