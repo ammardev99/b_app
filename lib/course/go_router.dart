@@ -11,7 +11,7 @@ import 'package:b_app/course/form_class.dart';
 import 'package:b_app/course/grid_builder.dart';
 import 'package:b_app/course/icons_images.dart';
 import 'package:b_app/course/listview.dart';
-import 'package:b_app/course/pickerClass.dart';
+import 'package:b_app/course/picker_class.dart';
 import 'package:b_app/course/richtext_class.dart';
 import 'package:b_app/course/row_columns.dart';
 import 'package:b_app/course/stack_class.dart';

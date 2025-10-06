@@ -265,11 +265,10 @@ class DatePickerField extends FormField<DateTime> {
     DateTime? initialDate,
     DateTime? firstDate,
     DateTime? lastDate,
-    FormFieldValidator<DateTime>? validator,
+    super.validator,
     void Function(DateTime?)? onDateSelected,
   }) : super(
          initialValue: initialDate,
-         validator: validator,
          builder: (state) {
            final value = state.value;
            String text;

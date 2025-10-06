@@ -1,6 +1,5 @@
 import 'package:b_app/widgets/formatting.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Class22 extends StatefulWidget {

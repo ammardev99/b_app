@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -23,6 +21,25 @@ class ContainerClass extends StatelessWidget {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Container(
+              padding: EdgeInsets.all(20),
+              color: Colors.purple,
+              // MediaQuery to get width screen size
+              width: MediaQuery.of(context).size.width * 0.5,
+              height: 100,
+              child: Row(
+                children: [
+                  CircleAvatar(backgroundColor: Colors.amber),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [Text("Title"), Text("data")],
+                  ),
+                  CircleAvatar(backgroundColor: Colors.amber),
+                ],
+              ),
+            ),
+
             // Container(
             //   height: 100,
             //   width: 100,
@@ -49,8 +66,7 @@ class ContainerClass extends StatelessWidget {
             //     //   begin: Alignment.topLeft,
             //     //   end: Alignment.bottomRight,
             //     // ),
-      
-                
+
             //     border: Border.all(
             //       color: Colors.black,
             //       width: 5,
@@ -58,9 +74,9 @@ class ContainerClass extends StatelessWidget {
             //   ),
             //   child: Center(child: Text("Container")),
             // ),
-      
+
             ///////////////
-            SizedBox(height: 20,),
+            SizedBox(height: 20),
             Container(
               height: 360,
               width: 360,
@@ -79,10 +95,8 @@ class ContainerClass extends StatelessWidget {
                     color: Colors.green,
                   ),
                 ),
-                
               ),
-              
-            )
+            ),
           ],
         ),
       ),

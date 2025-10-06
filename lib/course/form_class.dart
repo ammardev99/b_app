@@ -1,4 +1,3 @@
-
 // ignore_for_file: avoid_print
 
 import 'package:b_app/widgets/formatting.dart';
@@ -29,7 +28,7 @@ class _FormClassState extends State<FormClass> {
           key: _myformKey,
           child: Column(
             children: [
-              gapBox(5,50),
+              gapBox(5, 50),
               CustomInputField(),
               gapBox(20),
               CustomInputField(),
@@ -38,7 +37,40 @@ class _FormClassState extends State<FormClass> {
               gapBox(20, 50),
               CustomInputField(),
               gapBox(20),
-              
+              Switch(value: isPasswordVisible, 
+              activeColor: Colors.green,
+              inactiveThumbColor: Colors.black,
+              thumbColor: WidgetStatePropertyAll(Colors.grey),
+              onChanged: (value) {
+                // isPasswordVisible
+                setState(() {
+                isPasswordVisible = !isPasswordVisible;
+                });
+              },),
+              gapBox(20),
+
+              TextFormField(
+                decoration: InputDecoration(
+                  prefixIcon: Container(
+                    margin: EdgeInsets.all(5),
+                    padding: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Colors.purple,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(Icons.person_2_outlined, size: 20),
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                ),
+              ),
+
+              gapBox(20),
+
+
+
+              gapBox(20),
               ElevatedButton(
                 onPressed: () {
                   if (_myformKey.currentState!.validate()) {
