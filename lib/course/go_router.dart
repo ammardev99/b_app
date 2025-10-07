@@ -11,6 +11,8 @@ import 'package:b_app/course/form_class.dart';
 import 'package:b_app/course/grid_builder.dart';
 import 'package:b_app/course/icons_images.dart';
 import 'package:b_app/course/listview.dart';
+import 'package:b_app/course/nested_paging.dart/fram.dart';
+import 'package:b_app/course/page_view.dart';
 import 'package:b_app/course/picker_class.dart';
 import 'package:b_app/course/richtext_class.dart';
 import 'package:b_app/course/row_columns.dart';
@@ -39,6 +41,8 @@ class AppRoutes {
   static const String bottonBarClass = '/BottonBarClass';
   static const String class22 = '/Class22';
   static const String pickerClass = '/PickerClass';
+  static const String pageView = '/PageView';
+  static const String  frameF = '/FrameF';
 }
 // app_router.dart
 
@@ -88,5 +92,7 @@ final GoRouter appRouter = GoRouter(
     GoRoute(path: AppRoutes.bottonBarClass, builder: (context, state) => BottonBarClass()),
     GoRoute(path: AppRoutes.class22, builder: (context, state) => Class22()),
     GoRoute(path: AppRoutes.pickerClass, builder: (context, state) => PickerClass()),
+    GoRoute(path: AppRoutes.pageView, builder: (context, state) => MyPageView()),
+    GoRoute(path: AppRoutes.frameF, builder: (context, state) =>  FrameF()),
   ],
 );

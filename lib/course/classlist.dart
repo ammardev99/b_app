@@ -66,6 +66,20 @@ class _ClassListState extends State<ClassList> {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
+                context.go(AppRoutes.pageView);
+              },
+              child: Text("PageView"),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                context.go(AppRoutes.frameF);
+              },
+              child: Text(" FrameF"),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
                 context.go(AppRoutes.stackClass);
               },
               child: Text("Stack"),
