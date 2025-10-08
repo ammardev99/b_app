@@ -1,7 +1,6 @@
 import 'package:b_app/course/nested_paging.dart/tabs/tab_t1.dart';
 import 'package:b_app/course/nested_paging.dart/tabs/tab_t2.dart';
 import 'package:b_app/course/nested_paging.dart/tabs/tab_t3.dart';
-import 'package:b_app/course/nested_paging.dart/widget_page_indicator.dart';
 import 'package:flutter/material.dart';
 
 class PageP2 extends StatefulWidget {

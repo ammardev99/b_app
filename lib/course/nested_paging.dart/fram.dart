@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class FrameF extends StatefulWidget {
-  FrameF({super.key});
+  const FrameF({super.key});
 
   @override
   State<FrameF> createState() => _FrameFState();
@@ -38,7 +38,6 @@ class _FrameFState extends State<FrameF> {
                 setState(() {
                   currentPageIndex = 0;
                 });
-                print("Navigate to Tab T1  $currentPageIndex");
                 // Navigate to Page 1
               },
             ),
@@ -51,7 +50,6 @@ class _FrameFState extends State<FrameF> {
                   });
                 });
                 // Navigate to Page 2
-                print("Navigate to Tab T2  $currentPageIndex");
               },
             ),
             IconButton(
@@ -61,7 +59,6 @@ class _FrameFState extends State<FrameF> {
                   currentPageIndex = 2;
                 });
                 // Navigate to Screen S3
-                print("Navigate to Tab T3  $currentPageIndex");
               },
             ),
           ],
