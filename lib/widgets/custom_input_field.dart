@@ -8,7 +8,6 @@ class CustomInputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      
       decoration: InputDecoration(
       filled: true,
       fillColor: Colors.grey[200],
