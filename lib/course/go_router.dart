@@ -4,6 +4,7 @@ import 'package:b_app/course/14/collections_dart.dart';
 import 'package:b_app/course/botonbar.dart';
 import 'package:b_app/course/buttons_functions.dart';
 import 'package:b_app/course/custom_widget.dart';
+import 'package:b_app/course/master/aspectratio_constraind.dart';
 import 'package:b_app/course/radio_checkbox.dart';
 import 'package:b_app/course/my_lists_view.dart';
 import 'package:b_app/course/class22.dart';
@@ -48,6 +49,9 @@ class AppRoutes {
   static const String  customWidget = '/CustomWidget';
   // 14
   static const String  collectionList = '/collectionList';
+  // master
+  static const String  aspectRatioConstrainedBox = '/AspectRatioConstrainedBox';
+
 }
 // app_router.dart
 
@@ -100,6 +104,9 @@ final GoRouter appRouter = GoRouter(
     GoRoute(path: AppRoutes.pageView, builder: (context, state) => MyPageView()),
     GoRoute(path: AppRoutes.frameF, builder: (context, state) =>  FrameF()),
     GoRoute(path: AppRoutes.customWidget, builder: (context, state) =>  CustomWidget()),
+    // 14
     GoRoute(path: AppRoutes.collectionList, builder: (context, state) =>  CollectionList()),
+    // Master
+    GoRoute(path: AppRoutes.aspectRatioConstrainedBox, builder: (context, state) =>  AspectRatioConstrainedBox()),
   ],
 );

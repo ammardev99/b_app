@@ -87,6 +87,15 @@ class _ClassListState extends State<ClassList> {
               child: Text("Collection List"),
             ),
             SizedBox(height: 20),
+            Text("Master"),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                context.go(AppRoutes.aspectRatioConstrainedBox);
+              },
+              child: Text("AspectRatio ConstrainedBox"),
+            ),
+            SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 context.go(AppRoutes.frameF);

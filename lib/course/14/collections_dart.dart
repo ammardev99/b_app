@@ -74,6 +74,7 @@ List <ChatPerson> myChatsList = [
 
 
 
+// ignore: must_be_immutable
 class ShowChatCard extends StatelessWidget {
   ChatPerson obj;
    ShowChatCard({
