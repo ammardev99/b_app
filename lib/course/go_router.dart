@@ -1,9 +1,11 @@
 // call: context.go(AppRoutes.home);
 // app_routes.dart
+import 'package:b_app/course/14/collections_dart.dart';
 import 'package:b_app/course/botonbar.dart';
 import 'package:b_app/course/buttons_functions.dart';
-import 'package:b_app/course/class11.dart';
-import 'package:b_app/course/class21.dart';
+import 'package:b_app/course/custom_widget.dart';
+import 'package:b_app/course/radio_checkbox.dart';
+import 'package:b_app/course/my_lists_view.dart';
 import 'package:b_app/course/class22.dart';
 import 'package:b_app/course/classlist.dart';
 import 'package:b_app/course/container.dart';
@@ -43,6 +45,9 @@ class AppRoutes {
   static const String pickerClass = '/PickerClass';
   static const String pageView = '/PageView';
   static const String  frameF = '/FrameF';
+  static const String  customWidget = '/CustomWidget';
+  // 14
+  static const String  collectionList = '/collectionList';
 }
 // app_router.dart
 
@@ -94,5 +99,7 @@ final GoRouter appRouter = GoRouter(
     GoRoute(path: AppRoutes.pickerClass, builder: (context, state) => PickerClass()),
     GoRoute(path: AppRoutes.pageView, builder: (context, state) => MyPageView()),
     GoRoute(path: AppRoutes.frameF, builder: (context, state) =>  FrameF()),
+    GoRoute(path: AppRoutes.customWidget, builder: (context, state) =>  CustomWidget()),
+    GoRoute(path: AppRoutes.collectionList, builder: (context, state) =>  CollectionList()),
   ],
 );

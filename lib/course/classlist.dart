@@ -73,6 +73,22 @@ class _ClassListState extends State<ClassList> {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
+                context.go(AppRoutes.customWidget);
+              },
+              child: Text("Custom Widget"),
+            ),
+            SizedBox(height: 20),
+            Text("14"),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                context.go(AppRoutes.collectionList);
+              },
+              child: Text("Collection List"),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
                 context.go(AppRoutes.frameF);
               },
               child: Text(" FrameF"),
