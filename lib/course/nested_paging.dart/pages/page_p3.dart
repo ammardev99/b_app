@@ -8,15 +8,15 @@ class PageP3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-        title: const Text("Page P3"),
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(100),
-          )
-        ),
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.green,
+      //   title: const Text("Page P3"),
+      //   shape: const RoundedRectangleBorder(
+      //     borderRadius: BorderRadius.only(
+      //       bottomLeft: Radius.circular(100),
+      //     )
+      //   ),
+      // ),
       body: showPageInfo("Page 3", clr: Colors.blue),
     );
   }

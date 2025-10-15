@@ -38,8 +38,8 @@ class _PageP2State extends State<PageP2> with SingleTickerProviderStateMixin {
 
   // ✅ Your tab widgets
   final myTabs = const [
-    Tabt1(),
     Tabt2(),
+    Tabt1(),
     Tabt3(),
   ];
 
@@ -48,18 +48,18 @@ class _PageP2State extends State<PageP2> with SingleTickerProviderStateMixin {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        bottom: TabBar(
-          controller: _tabController,
-          isScrollable: true,
-          labelColor: Colors.white,
-          unselectedLabelColor: Colors.white70,
-          indicatorColor: Colors.yellow,
-          tabs: const [
-            Tab(text: "TabT1"),
-            Tab(text: "TabT2"),
-            Tab(text: "TabT3"),
-          ],
-        ),
+        // bottom: TabBar(
+        //   controller: _tabController,
+        //   isScrollable: true,
+        //   labelColor: Colors.white,
+        //   unselectedLabelColor: Colors.white70,
+        //   indicatorColor: Colors.yellow,
+        //   tabs: const [
+        //     Tab(text: "TabT1"),
+        //     Tab(text: "TabT2"),
+        //     Tab(text: "TabT3"),
+        //   ],
+        // ),
       ),
       body: PageView(
         controller: _pageController,

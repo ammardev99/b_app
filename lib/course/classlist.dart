@@ -87,6 +87,24 @@ class _ClassListState extends State<ClassList> {
               child: Text("Collection List"),
             ),
             SizedBox(height: 20),
+            Text("19"),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                context.go(AppRoutes.customInput);
+              },
+              child: Text("custom Input"),
+            ),
+            SizedBox(height: 20),
+            Text("22"),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                context.go(AppRoutes.bottomNavigationClass);
+              },
+              child: Text("bottomNavigationClass"),
+            ),
+            SizedBox(height: 20),
             Text("Master"),
             SizedBox(height: 20),
             ElevatedButton(
