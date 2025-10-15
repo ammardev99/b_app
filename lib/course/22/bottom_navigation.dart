@@ -1,10 +1,12 @@
+// ignore_for_file: avoid_print
+
 import 'package:b_app/course/nested_paging.dart/pages/page_p1.dart';
 import 'package:b_app/course/nested_paging.dart/pages/page_p2.dart';
 import 'package:b_app/course/nested_paging.dart/pages/page_p3.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavigationClass extends StatefulWidget {
-  BottomNavigationClass({super.key});
+  const BottomNavigationClass({super.key});
 
   @override
   State<BottomNavigationClass> createState() => _BottomNavigationClassState();
