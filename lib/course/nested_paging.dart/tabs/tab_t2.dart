@@ -7,7 +7,10 @@ class Tabt2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: showPageInfo("Tabt 2", clr: Colors.orange),
+      body: Container(
+        color: Colors.amber,
+        child: showPageInfo("Tabt 2", clr: Colors.orange),
+      ),
     );
   }
 }

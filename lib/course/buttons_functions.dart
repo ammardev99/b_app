@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: avoid_print, deprecated_member_use
 
 import 'package:flutter/material.dart';
 
@@ -29,7 +29,6 @@ class _ButtonsFunctionsState extends State<ButtonsFunctions> {
                 backgroundColor: WidgetStateProperty.all(Colors.green),
               ),
               onPressed: () {
-
                 // customTerminalText("Clicked Elevated Button");
               },
               child: Text(
@@ -44,7 +43,6 @@ class _ButtonsFunctionsState extends State<ButtonsFunctions> {
             SizedBox(height: 10),
             TextButton(
               onPressed: () {
-
                 // customTerminalText("Text Button Clicked");
               },
               child: Text("Text 2"),
@@ -64,28 +62,33 @@ class _ButtonsFunctionsState extends State<ButtonsFunctions> {
               icon: Icon(Icons.thumb_up),
             ),
 
-            TextButton(onPressed: (){
-              // printStrLine();
-              printMyLine('#');
-            }, child: Text("Print Line")),
+            TextButton(
+              onPressed: () {
+                // printStrLine();
+                printMyLine('#');
+              },
+              child: Text("Print Line"),
+            ),
 
-            SizedBox(height: 20,),
+            SizedBox(height: 20),
 
-            IconButton(onPressed: (){
-              // sum(10, 15);
-              print(50);
-              print(sumValue(50, 10));
-
-            }, icon: Icon(Icons.calculate_rounded)),
-            SizedBox(height: 20,),
+            IconButton(
+              onPressed: () {
+                // sum(10, 15);
+                print(50);
+                print(sumValue(50, 10));
+              },
+              icon: Icon(Icons.calculate_rounded),
+            ),
+            SizedBox(height: 20),
             Divider(),
-            SizedBox(height: 20,),
+            SizedBox(height: 20),
 
             // ),
-// myContainer("App Name",50, 300, Colors.green),
-myContainer(Icons.call ,50, 300, Colors.green),
-myContainer(Icons.video_call ,20, 100, Colors.red),
-            printLineCard("Flutter",),
+            // myContainer("App Name",50, 300, Colors.green),
+            myContainer(Icons.call, 50, 300, Colors.green),
+            myContainer(Icons.video_call, 20, 100, Colors.red),
+            printLineCard("Flutter"),
           ],
         ),
       ),
@@ -93,38 +96,50 @@ myContainer(Icons.video_call ,20, 100, Colors.red),
   }
 }
 
-
-Widget printLineCard(String str, [String? chr]){
+Widget printLineCard(String str, [String? chr]) {
   return Text("$chr*****$str*****$chr");
 }
-
-
-
 
 // print line
 // print value
 // Sum
 
-
-void printStrLine(){
+void printStrLine() {
   print("*************************");
 }
 
-void printMyLine(String txt){
-  print(txt+txt+txt+txt+txt+txt+txt+txt+txt+txt+txt+txt+txt+txt+txt+txt+txt+txt);
+void printMyLine(String txt) {
+  print(
+    txt +
+        txt +
+        txt +
+        txt +
+        txt +
+        txt +
+        txt +
+        txt +
+        txt +
+        txt +
+        txt +
+        txt +
+        txt +
+        txt +
+        txt +
+        txt +
+        txt +
+        txt,
+  );
 }
 
-
-void sum(int x, int y){
-  print("Sum: ${x+y}" );
+void sum(int x, int y) {
+  print("Sum: ${x + y}");
 }
 
-double sumValue(double x, double y){
-  return x+y;
-
+double sumValue(double x, double y) {
+  return x + y;
 }
 
-Widget myContainer(IconData getIcon, double h, double w, Color getColor){
+Widget myContainer(IconData getIcon, double h, double w, Color getColor) {
   return Container(
     height: h,
     width: w,
@@ -132,4 +147,45 @@ Widget myContainer(IconData getIcon, double h, double w, Color getColor){
     // child: Text(label),
     child: Icon(getIcon),
   );
+}
+
+// ignore: must_be_immutable
+class CustomButton extends StatelessWidget {
+  String label;
+  VoidCallback onAction;
+  bool show = false;
+  double btnWidth;
+
+  CustomButton({
+    super.key,
+    required this.label,
+    this.btnWidth = 1,
+    required this.onAction,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity * btnWidth,
+      child: Row(
+        children: [
+          show
+              ? Icon(Icons.arrow_right_alt, color: Colors.blueAccent)
+              : SizedBox(),
+
+          ElevatedButton(
+            style: ButtonStyle(
+              shape: WidgetStatePropertyAll(
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(3)),
+              ),
+
+              backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
+            ),
+            onPressed: onAction,
+            child: Text(label, style: TextStyle(color: Colors.white)),
+          ),
+        ],
+      ),
+    );
+  }
 }

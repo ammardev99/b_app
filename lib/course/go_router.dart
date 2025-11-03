@@ -3,13 +3,17 @@
 import 'package:b_app/course/14/collections_dart.dart';
 import 'package:b_app/course/19/custom_input.dart';
 import 'package:b_app/course/22/bottom_navigation.dart';
+import 'package:b_app/course/22/paging.dart';
+import 'package:b_app/course/22/tab_bar_view.dart';
 import 'package:b_app/course/botonbar.dart';
 import 'package:b_app/course/buttons_functions.dart';
 import 'package:b_app/course/custom_widget.dart';
 import 'package:b_app/course/master/aspectratio_constraind.dart';
+import 'package:b_app/course/master/data_tables.dart';
+import 'package:b_app/course/master/product_data.dart';
 import 'package:b_app/course/radio_checkbox.dart';
 import 'package:b_app/course/my_lists_view.dart';
-import 'package:b_app/course/class22.dart';
+import 'package:b_app/course/17/class22.dart';
 import 'package:b_app/course/classlist.dart';
 import 'package:b_app/course/container.dart';
 import 'package:b_app/course/form_class.dart';
@@ -56,18 +60,26 @@ class AppRoutes {
   static const String  customInput = '/customInput';
   //22
   static const String  bottomNavigationClass = '/BottomNavigationClass';
+  static const String  pagingClass = '/PagingClass';
+  static const String  tabBarView = '/TabBarView';
   // master
   static const String  aspectRatioConstrainedBox = '/AspectRatioConstrainedBox';
+  static const String  dataTableClass = '/DataTableClass';
+  static const String  productCollection = '/ProductCollection';
 
 }
 // app_router.dart
 
 final GoRouter appRouter = GoRouter(
   routes: [
-    GoRoute(
-      path: AppRoutes.classList,
-      builder: (context, state) => ClassList(),
-    ),
+
+    GoRoute(path: AppRoutes.classList,builder: (context, state) => ClassList(),),
+   
+   
+   
+   
+   
+   
     GoRoute(
       path: AppRoutes.rowColumns,
       builder: (context, state) => RowColumns(),
@@ -117,7 +129,11 @@ final GoRouter appRouter = GoRouter(
     GoRoute(path: AppRoutes.customInput, builder: (context, state) =>  CustomInput()),
     // 22
     GoRoute(path: AppRoutes.bottomNavigationClass, builder: (context, state) =>  BottomNavigationClass()),
+    GoRoute(path: AppRoutes.pagingClass, builder: (context, state) =>  PagingClass(),),
+    GoRoute(path: AppRoutes.tabBarView, builder: (context, state) => MyTabBarScreen(),),
     // Master
     GoRoute(path: AppRoutes.aspectRatioConstrainedBox, builder: (context, state) =>  AspectRatioConstrainedBox()),
+    GoRoute(path: AppRoutes.dataTableClass, builder: (context, state) =>  DataTableClass()),
+    GoRoute(path: AppRoutes.productCollection, builder: (context, state) =>  ProductTable()),
   ],
 );

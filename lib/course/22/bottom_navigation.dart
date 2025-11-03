@@ -16,49 +16,33 @@ class _BottomNavigationClassState extends State<BottomNavigationClass> {
   int _currentPage = 0;
 
   final List<Widget> _pages = [
-    PageP1(),  // 0
-    PageP2(),  // 1
-    PageP3(),  // 2
+    PageP1(), // 0
+    PageP2(), // 1
+    PageP3(), // 2
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: ,
       body: _pages[_currentPage],
-      // floatingActionButton: ,
-      // drawer: ,
-      // bottomSheet: ,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentPage,
         items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Fav',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-          
-          ], 
-        
-        onTap: (int index) {
-            setState(() {
-              print("index: $index");
-              print("Page: $_currentPage");
-              _currentPage = index;
-              print("Updated Page: $_currentPage");
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
 
-            });
-          },
-          
-          )
+          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Fav'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+        ],
+
+        onTap: (int index) {
+          setState(() {
+            print("index: $index");
+            print("Page: $_currentPage");
+            _currentPage = index;
+            print("Updated Page: $_currentPage");
+          });
+        },
+      ),
     );
   }
 }

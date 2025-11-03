@@ -38,8 +38,8 @@ class _PageP2State extends State<PageP2> with SingleTickerProviderStateMixin {
 
   // ✅ Your tab widgets
   final myTabs = const [
-    Tabt2(),
     Tabt1(),
+    Tabt2(),
     Tabt3(),
   ];
 

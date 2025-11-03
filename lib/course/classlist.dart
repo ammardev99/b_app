@@ -104,6 +104,20 @@ class _ClassListState extends State<ClassList> {
               },
               child: Text("bottomNavigationClass"),
             ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                context.go(AppRoutes.pagingClass);
+              },
+              child: Text("Paging Class"),
+            ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                context.go(AppRoutes.tabBarView);
+              },
+              child: Text("Tab Bar View"),
+            ),
             SizedBox(height: 20),
             Text("Master"),
             SizedBox(height: 20),
@@ -112,6 +126,20 @@ class _ClassListState extends State<ClassList> {
                 context.go(AppRoutes.aspectRatioConstrainedBox);
               },
               child: Text("AspectRatio ConstrainedBox"),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                context.go(AppRoutes.dataTableClass);
+              },
+              child: Text("dataTableClass"),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                context.go(AppRoutes.productCollection);
+              },
+              child: Text("Product Table"),
             ),
             SizedBox(height: 20),
             ElevatedButton(
