@@ -66,6 +66,7 @@ class AppRoutes {
   static const String  aspectRatioConstrainedBox = '/AspectRatioConstrainedBox';
   static const String  dataTableClass = '/DataTableClass';
   static const String  productCollection = '/ProductCollection';
+  static const String  listRendering = '/ListRendering';
 
 }
 // app_router.dart
@@ -135,5 +136,6 @@ final GoRouter appRouter = GoRouter(
     GoRoute(path: AppRoutes.aspectRatioConstrainedBox, builder: (context, state) =>  AspectRatioConstrainedBox()),
     GoRoute(path: AppRoutes.dataTableClass, builder: (context, state) =>  DataTableClass()),
     GoRoute(path: AppRoutes.productCollection, builder: (context, state) =>  ProductTable()),
+    // GoRoute(path: AppRoutes.listRendering, builder: (context, state) =>  ListRendering()),
   ],
 );

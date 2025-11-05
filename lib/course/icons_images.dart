@@ -1,4 +1,5 @@
 import 'package:b_app/course/go_router.dart';
+import 'package:b_app/widgets/formatting.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -26,6 +27,9 @@ class _IconsImagesState extends State<IconsImages> {
           //   'https://poul3y.com/storage/media_images/mxU0OQyYoLdSeumwELlK1CwTtp9NfBRCIcHJgxCe.jpg',
           //   width: 300,
           // ),
+          gapBox(10),
+          // Icon(Icons.lock),
+          gapBox(10),
 
       Container(
         width: 300,

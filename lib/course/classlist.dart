@@ -144,6 +144,16 @@ class _ClassListState extends State<ClassList> {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
+                context.go(AppRoutes.listRendering);
+              },
+              child: Text("List Rendering"),
+            ),
+
+            Divider(),
+            SizedBox(height: 20),
+
+            ElevatedButton(
+              onPressed: () {
                 context.go(AppRoutes.frameF);
               },
               child: Text(" FrameF"),
